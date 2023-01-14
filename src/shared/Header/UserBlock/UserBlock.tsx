@@ -1,21 +1,23 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { IRootState } from '../../../../store/reducers/root';
-import { EIcons, Icon } from '../../../Icon';
-import { EColors, Text } from '../../../Text';
+import { IUserData } from '../../../store/actions/me';
+import { IRootState } from '../../../store/reducers/root';
+import { EIcons, Icon } from '../../Icon';
+import { EColors, Text } from '../../Text';
 import styles from './userblock.css';
-
-interface IUserBlockProps {
-  avatarSrc?: string;
-  username?: string;
-}
 
 const CLIENT_ID = process.env.ClIENT_ID;
 
-export function UserBlock({ avatarSrc, username }: IUserBlockProps) {
+export function UserBlock() {
   const isLoading = useSelector<IRootState, boolean>(
     (state) => state.me.loading
   );
+
+  const { iconImg: avatarSrc, name: username } = useSelector<
+    IRootState,
+    IUserData
+  >((state) => state.me.data);
+
   return (
     <a
       className={styles.userBox}

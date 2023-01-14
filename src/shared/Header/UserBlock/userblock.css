@@ -2,6 +2,8 @@
   cursor: pointer;
   display: flex;
   align-items: center;
+  background-color: var(--white);
+  padding: 14px 10px;
 }
 
 .userBox:hover span {
@@ -36,8 +38,12 @@
   .username {
     display: flex;
   }
-}
 
+  .userBox {
+    padding: 0;
+    background-color: transparent;
+  }
+}
 
 @media all and (min-width: 320px) and (max-width: 1023px) {
   .avatarBox {
