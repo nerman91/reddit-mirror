@@ -1,0 +1,60 @@
+.input {
+  width: 100%;
+  border: 1px solid #d9d9d9;
+  padding: 12px 10px 0;
+  border-radius: 3px 3px 3px 3px;
+  border: 1px solid #d9d9d9;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 10px;
+  color: #999999;
+  resize: none;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--orange);
+}
+
+.inputInvalid {
+  border-color: red;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin-right: 10px;
+}
+
+.inputPromt {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: var(--grey66);
+}
+
+.inputUser {
+  color: var(--orange);
+}
+
+@media all and (min-width: 1024px) {
+  .inputPromt {
+    display: inline;
+    top: 18px;
+    left: 18px;
+  }
+
+  .inputWrapper {
+    margin-right: 0;
+  }
+
+  .input {
+    height: 89px;
+    width: 100%;
+    padding: 16px;
+    border-radius: 3px 3px 0px 0px;
+  }
+}

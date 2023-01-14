@@ -1,0 +1,146 @@
+.modal {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  max-width: 960px;
+  width: 100%;
+  min-height: 160px;
+  padding: 24px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #ffffff;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.15);
+  border-radius: 7px;
+}
+
+.modal h2 {
+  margin: 0;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+}
+
+.head [class*='karmaCounter'] {
+  display: none;
+}
+
+.content {
+  overflow-y: auto;
+  margin-bottom: 28px;
+}
+
+.commentsList {
+  padding: 20px 0px;
+}
+
+.postInfo {
+  position: relative;
+  padding-top: 20px;
+}
+
+.closeModal {
+  right: 0;
+  top: 0;
+  position: absolute;
+}
+
+.closeModal svg path {
+  transition: fill 0.1s;
+}
+
+.closeModal:hover svg path {
+  fill: var(--orange);
+}
+
+.postActionsDesktop {
+  display: none;
+}
+
+.postActionsMobile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.actionsSend {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.commentsMobile {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.commentsMobile span {
+  transition: color 0.1s;
+}
+
+.commentsMobile svg path,
+.sharedMobile svg circle,
+.complaintMobile svg circle {
+  transition: fill 0.1s;
+}
+
+.commentsMobile:active span {
+  color: var(--orange);
+}
+
+.commentsMobile:active svg path,
+.sharedMobile:active svg circle,
+.complaintMobile:active svg circle {
+  fill: var(--orange);
+}
+
+.loader {
+  padding: 15px 0;
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+}
+
+@media all and (min-width: 1024px) {
+  .postActionsMobile {
+    display: none;
+  }
+
+  .head [class*='karmaCounter'] {
+    display: flex;
+  }
+
+  .postActionsDesktop {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    padding: 14px 0;
+    border-top: 1px solid var(--grey99);
+  }
+
+  .postAction button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: fill 0.1s;
+  }
+
+  .postAction button:hover span {
+    color: var(--orange);
+  }
+
+  .postAction button:hover svg path {
+    fill: var(--orange);
+  }
+
+  .loader {
+    font-size: 20px;
+  }
+}

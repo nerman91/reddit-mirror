@@ -1,0 +1,88 @@
+.сomment {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.сomment:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.сomment::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 8.5px;
+  width: 2px;
+  background-color: var(--greyC4);
+}
+
+/* comment head */
+
+.head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.head [class*='karmaValue'],
+.head [class*='publishedLabel'] {
+  display: none;
+}
+
+.head [class*='karmacounter__down'] {
+  padding: 0;
+}
+
+.head [class*='karmaCounter'] {
+  display: none;
+  margin-right: 22px;
+}
+
+.head [class*='metaData'] {
+  flex-flow: row nowrap;
+  padding-left: 24px;
+}
+
+.head [class*='userLink'] {
+  margin-right: 5px;
+}
+
+.replies {
+  padding-top: 40px;
+}
+
+/* info */
+
+.commentInfo {
+  display: flex;
+  flex-direction: column;
+  padding-left: 24px;
+}
+
+.commentInfo > p {
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+@media all and (min-width: 1024px) {
+  .head [class*='metaData'] {
+    padding-left: 14px;
+  }
+
+  .head [class*='karmaCounter'] {
+    display: flex;
+    margin-right: 0;
+  }
+
+  .сomment::before {
+    top: 45px;
+    width: 3px;
+  }
+
+  .commentInfo {
+    padding-left: 24px;
+  }
+}

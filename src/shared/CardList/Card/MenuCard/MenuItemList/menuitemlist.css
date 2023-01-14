@@ -1,0 +1,46 @@
+.menuItemsList {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.menuItem {
+  padding: 12px 0;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.menuItem:not(:last-child) {
+  border-bottom: 1px solid var(--greyEC);
+}
+
+.menuItem > div + span {
+  margin-left: 7px;
+}
+
+.menuItem svg *,
+.menuItem span {
+  transition-duration: 0.15s;
+  transition-property: fill, color;
+}
+
+.menuItemDesktop {
+  display: none;
+}
+
+@media all and (min-width: 1024px) {
+  .menuItemDesktop {
+    display: flex;
+  }
+}
+
+@media all and (min-width: 1540px) {
+  .menuItem:hover span {
+    color: var(--orange);
+  }
+
+  .menuItem:hover svg * {
+    fill: var(--orange);
+  }
+}

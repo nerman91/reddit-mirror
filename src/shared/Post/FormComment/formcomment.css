@@ -1,0 +1,19 @@
+.form {
+  display: flex;
+  padding-top: 20px;
+}
+
+.btnPlus {
+  margin-right: 10px;
+}
+
+@media all and (min-width: 1024px) {
+  .btnPlus {
+    display: none;
+    margin-right: 10px;
+  }
+
+  .form {
+    flex-direction: column;
+  }
+}

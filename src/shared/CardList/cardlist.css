@@ -1,0 +1,32 @@
+.listEnd {
+  display: flex;
+  justify-content: center;
+}
+
+.showMore {
+  padding: 8px 18px;
+  margin-bottom: 40px;
+  color: var(--white);
+  background-color: var(--orange);
+}
+
+.cardsList {
+  display: flex;
+  flex-direction: column;
+}
+
+.loader {
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+}
+
+@media all and (min-width: 1024px) {
+  .cardsList {
+    padding: 40px 0;
+  }
+
+  .loader {
+    font-size: 20px;
+  }
+}

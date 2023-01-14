@@ -1,0 +1,88 @@
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.actions [class*='karmaCounter'] svg path {
+  fill: var(--grey99);
+}
+
+.actionsDesktop {
+  display: none;
+}
+
+.reply {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.actionsMobile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.reply:active svg path {
+  transition: fill 0.1s;
+}
+
+.reply:active svg path {
+  fill: var(--orange);
+}
+
+.sharedMobile svg circle,
+.complaintMobile svg circle {
+  transition: fill 0.1s;
+}
+
+.sharedMobile:active svg circle,
+.complaintMobile:active svg circle {
+  fill: var(--orange);
+}
+
+@media all and (min-width: 1024px) {
+  .actions [class*='karmaCounter'],
+  .actionsMobile {
+    display: none;
+  }
+
+  .actionsDesktop {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+  }
+
+  .reply,
+  .sharedDesktop,
+  .complaintDesktop {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .reply span,
+  .sharedDesktop span,
+  .complaintDesktop span {
+    transition: color 0.1s;
+  }
+
+  .reply svg path,
+  .sharedDesktop svg path,
+  .complainDesktopt svg path {
+    transition: fill 0.1s;
+  }
+
+  .reply:hover span,
+  .sharedDesktop:hover span,
+  .complaintDesktop:hover span {
+    color: var(--orange);
+  }
+
+  .reply:hover svg path,
+  .sharedDesktop:hover svg path,
+  .complaintDesktop:hover svg path {
+    fill: var(--orange);
+  }
+}
